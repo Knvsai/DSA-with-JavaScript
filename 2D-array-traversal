@@ -1,0 +1,32 @@
+function finalPosition(move,n)
+{
+    let l = move.length;
+    let countUp = 0, countDown = 0;
+    let countLeft = 0, countRight = 0;
+    let top = 0, left = 0;
+    let down = n-1;
+    let right = n-1;
+    // traverse the instruction string
+    // 'move'
+    for (let i = 0; i < l; i++)
+    {
+       // for each movement increment
+        // its respective counter
+
+        if (move[i] == 'U'){
+            countUp++
+            
+        }
+
+        else if (move[i] == 'D')
+            countDown++;
+
+        else if (move[i] == 'L')
+            countLeft++;
+
+        else if (move[i] == 'R')
+            countRight++;
+    }
+}
+let move = "UDDLLRUUUDUURUDDUULLDRRRR";
+finalPosition(move);
